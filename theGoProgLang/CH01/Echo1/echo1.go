@@ -1,3 +1,4 @@
+//go run echo1.go args1 args2 args3
 package main
 
 import (
