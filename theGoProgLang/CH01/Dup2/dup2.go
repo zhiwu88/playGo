@@ -1,3 +1,4 @@
+//go run dup2.go 1.txt
 package main
 
 import (
