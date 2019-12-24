@@ -1,3 +1,5 @@
+// go run fetchall.go https://golang.org http://www.gopl.io https://godoc.org
+
 package main
 
 import (
