@@ -1,3 +1,5 @@
+//go run echo4.go -h
+
 package main
 
 import (
