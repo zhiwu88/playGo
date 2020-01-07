@@ -1,5 +1,6 @@
-package main
+package tempconv
 
+//声明两个自定义的类型 Celsius 和 Fahrenheit
 type Celsius float64
 type Fahrenheit float64
 
