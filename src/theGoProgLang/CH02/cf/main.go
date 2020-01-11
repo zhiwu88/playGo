@@ -1,10 +1,15 @@
+//go run main.go 27
+
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strconv"
+	tempconv "theGoProgLang/CH02/tempconv"
+)
 
-import tempconv "theGoProgLang/CH02/tempconv"
-
-func main()  {
+func main() {
 	for _, arg := range os.Args[1:] {
 		t, err := strconv.ParseFloat(arg, 64)
 		if err != nil {
