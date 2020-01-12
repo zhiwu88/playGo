@@ -1,13 +1,14 @@
-package main
+package popcount
 
 var pc [256]byte
 
-func int() {
+func init() {
 	for i := range pc {
 		pc[i] = pc[i/2] + byte(i&1)
 	}
 }
 
+//PopCount 返回x的种群统计（置位的个数）
 func PopCount(x uint64) int {
 	return int(pc[byte(x>>(0*8))] +
 		pc[byte(x>>(1*8))] +
