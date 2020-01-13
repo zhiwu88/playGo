@@ -1,4 +1,6 @@
-package popcount
+package main
+
+import "fmt"
 
 var pc [256]byte
 
@@ -18,4 +20,9 @@ func PopCount(x uint64) int {
 		pc[byte(x>>(5*8))] +
 		pc[byte(x>>(6*8))] +
 		pc[byte(x>>(7*8))])
+}
+
+func main() {
+	p := PopCount(15)
+	fmt.Println(p)
 }
