@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <p>User1</p>
+    <p>Hello {{ .u1.Name }}</p>
+    <p>Age: {{ .u1.Age }}</p>
+    <P>Sex: {{ .u1.Gender }}</P>
+    <hr>
+    <p>Map1</p>
+    <P>{{ .m1.name }}</P>
+    <P>{{ .m1.age }}</P>
+    <P>{{ .m1.gender }}</P>
+    <hr>
+
+    /* 自定义模板变量 */
+    {{ $v1 := 100 }}
+    {{ $age := .m1.age }}
+
+    /* if 判断 */
+    {{ if $v1 }}
+    {{ $v1 }}
+    {{ else }}
+    Nothing.
+    {{ end }}
+    <hr>
+
+    /* 比较运算 */
+    {{ if lt .m1.age 22 }}
+    Good good study day day up.
+    {{ else }}
+    Work hard
+    {{ end }}
+</body>
+</html>
