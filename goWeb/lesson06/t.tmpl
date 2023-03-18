@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Hello</title>
+</head>
+<body>
+    <h1>测试嵌套template语法</h1>
+    <hr>
+    {{/* 嵌套单独template */}}
+    {{ template "ul.tmpl" }}
+    <hr>
+    {{/* 嵌套define定义template */}}
+    {{ template "ol.tmpl" }}
+</body>
+</html>
+{{/* 通过define定义一个模板 */}}
+{{ define "ol.tmpl" }}
+    <ol>
+        <li>ol-1</li>
+        <li>ol-2</li>
+        <li>ol-3</li>
+    </ol>
+{{ end }}
